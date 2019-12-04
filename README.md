@@ -42,6 +42,9 @@ Once the correct version of golang is installed, you should be able to clone the
  - `./chatterbox` (*nix systems)
  - IMPORTANT NOTE - The app is not yer portable, so if you deploy this, you will also need the assets directory
 
+## Client Access ##
+- Webserver will start by default at http://localhost:8080
+
 # Enviromentals / Execution #
 
 ## Environmentals ##
@@ -54,8 +57,8 @@ Usage:
 
 Flags:
   -h, --help            help for chatterbox
-  -a, --ipaddr string   IP Address of the webserver (default: 0.0.0.0) (default "0.0.0.0")
-  -p, --port string     Port of the webserver (default: 8080) (default "8080")
+  -a, --ipaddr string   IP Address of the webserver (default: 0.0.0.0) 
+  -p, --port string     Port of the webserver (default: 8080)
       --version         version for chatterbox
 ```
 
