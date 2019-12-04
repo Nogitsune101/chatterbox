@@ -32,7 +32,7 @@ Go to https://golang.org/dl/ and grab golang v1.12.12 and install it following t
 Once the correct version of golang is installed, you should be able to clone the respository using git and run of the following to start the server
 
 ## Git Cloning ##
-- `git clone `
+- `git clone https://github.com/Nogitsune101/chatterbox.git`
 
 ## Development Run ##
  - `go run main.go`
