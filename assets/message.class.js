@@ -130,7 +130,7 @@ class ChatterBoxMessage {
                 return this.info(
 `/e or /emote {emote text}         (Sends a custom emote)
 /h or /help                       (Displays help text)
-/r or /reply {message}            (Replys to the last whisper you received)
+/r or /reply {message}            (Replies to the last whisper you received)
 /s or /shout {message}            (Shouts a message to the others in the room)
 /w or /whisper {user} {message}   (Sends a private message to another user)
 /fart                             (Fart emote)
