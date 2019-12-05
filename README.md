@@ -78,15 +78,15 @@ Had I the time, I would have added cypress tests for integration testing on the 
 
 ## Compile/Run ##
 - Ubuntu (works)
-- OSX (untested)
-- Windows 10 (untested)
+- OSX (works)
+- Windows 10 (works)
 
 ## Web Client ##
 - Chrome (compatible) *recommended
 - Edge Beta (compatible)
 - Firefox (compatible) *minor css issues
-- Safari (nope) *notes in known bug
-- Edge (nope) *notes in known bug
+- Safari (nope) *notes in known bugs
+- Edge (nope) *notes in known bugs
 
 # Client Usage #
 ```
