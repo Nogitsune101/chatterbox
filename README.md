@@ -25,11 +25,22 @@ Here are the technologies I've used:
 IMPORTANT NOTE - I used https://github.com/gorilla/websocket/tree/master/examples/chat as my base for the sockets portion of the application. Most of this code has been touched or replaced to add features
 
 # Installation / Building #
-This is pretty much a golang application, all you really need to compile it is golang. I used go version 1.12 on Ubuntu to compile my application.  As for compatibility, I have not tested on OSX or Windows but my experience with go compatibility has been stellar cross platform.  I am not sure however if it will compile with newer versions of go, I have seen backward compatibility issues with v1.13+
+This is pretty much a golang application, all you really need to compile it is golang. I used go version 1.12 on dev Ubuntu machine to compile my application. I have at this point confirmed that the application compiles fine with the latest version of golang on OSX (x64), Win10 (x64), and Ubuntu (x64)
 
-Go to https://golang.org/dl/ and grab golang v1.12.12 and install it following the site instructions. (A personal note - make sure you pay attention to the path environmental settings, I've found this to be a sticking point for most people)
+If you have issues installing and compiling with golang (the struggle is real), I have provided binaries with the respository.  I'm also including a step-by-step for OSX.
 
-Once the correct version of golang is installed, you should be able to clone the repository using git and run of the following to start the server
+## OSX Installation ##
+- Use your favorite browser and navigate to https://golang.org/dl
+- Download and install go1.13.5.darwin-amd64.pkg
+- Open a new terminal (do not use a previously opened terminal)
+- Type `mkdir $HOME/go`
+- Type `cd $HOME/go`
+- Type `git clone https://github.com/Nogitsune101/chatterbox.git`
+- Type `cd chatterbox`
+- Type `go run main.go`
+- At this point go should download packages and start the chat server
+- Use one of the compatible browsers listed below and open a couple windows for testing
+- Enter a unique username in each window and have fun
 
 ## Git Cloning ##
 - `git clone https://github.com/Nogitsune101/chatterbox.git`
@@ -71,11 +82,11 @@ Had I the time, I would have added cypress tests for integration testing on the 
 - Windows 10 (untested)
 
 ## Web Client ##
-- Chrome (compatible)
-- Firefox (compatible)
+- Chrome (compatible) *recommended
 - Edge Beta (compatible)
-- Edge (nope)
-- Safari (unknown)
+- Firefox (compatible) *minor css issues
+- Safari (nope) *notes in known bug
+- Edge (nope) *notes in known bug
 
 # Client Usage #
 ```
@@ -113,3 +124,5 @@ Had I the time, I would have added cypress tests for integration testing on the 
 - [Firefox] easter egg 1 is a bit clippy
 - [Firefox] easter egg 2, css background-size: cover doesn't appear to be supported
 - [Client] people can use the same display name with weird results!
+- [Edge] issues due to Edge's lack of full ES6 support
+- [Safari] issues due to Safari's lack of full ES6 support

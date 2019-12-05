@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chatterbox</title>
+    <script type="text/javascript" src="message.class.js"></script>
+    <script type="text/javascript" src="client.class.js"></script>
+    <script type="text/javascript" src="chatterbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="default.css" />
+</head>
+<body>
+    <table class="page-wrapper">
+        <tbody>
+            <tr>
+                <td class="header">
+                        <div class="header-container">
+                        <div class="logo">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 225 225" enable-background="new 0 0 225 225" xml:space="preserve">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M176.296,81.078c14.415,0.513,29.363-2.058,37.135,5.713
+                                    c7.302,7.301,5.713,26.11,5.713,42.847c0,14.199,1.403,34.921-5.713,41.896c-6.039,5.919-16.726,4.8-26.661,4.761
+                                    c-0.781,10.885,2.643,23.521-4.761,25.708c-9.883,2.92-24.614-23.87-31.422-25.708c-20.313,0-40.626,0-60.939,0
+                                    c-10.126-4.474-14.794-14.406-13.331-30.47c-8.681,1.404-16.717,23.768-26.661,19.995c-8.134-3.085-3.64-16.663-4.761-29.517
+                                    c-21.04-0.426-37.501-1.333-39.991-21.9c-1.317-10.879,0-25.633,0-40.943c0-28.961-3.256-47.675,19.043-51.417
+                                    c10.291-1.727,23.058,0,35.23,0c22.367,0,45.682,0,69.508,0c11.786,0,25.418-1.822,33.326,0.952
+                                    C179.827,29.245,176.129,55.538,176.296,81.078z M128.687,35.374c-22.766,0-46.351,0-68.556,0
+                                    c-13.335,0-30.634-1.379-37.135,1.904c-1.359,0.228-1.606,1.568-2.856,1.904c-1.721,11.831-0.952,26.239-0.952,39.991
+                                    c0,14.372-1.466,28.697,1.904,39.991c6.454,6.241,24.942,0.449,34.278,3.809c4.033,2.95,2.663,11.303,2.856,18.092
+                                    c9.894-0.656,11.338-15.886,22.852-19.044c10.536-2.89,26.911,0,39.991,0c13.599,0,26.881,1.482,38.087-1.904
+                                    c4.954-9.958,2.856-25.674,2.856-39.991c0-15.14,1.454-30.622-1.904-41.896C151.419,33.322,139.724,35.374,128.687,35.374z
+                                    M176.296,95.361c-0.555,10.321,1.016,18.591-0.952,24.756c-8.248,25.837-54.101,11.574-84.744,15.235
+                                    c0.564,8.322-1.174,18.947,0.952,25.708c16.816,7.155,46.086-2.972,63.795,1.904c9.36,2.578,9.758,13.196,18.092,15.235
+                                    c-0.066-5.779-0.76-12.186,2.856-14.283c6.95-2.57,19.749,0.707,26.66-1.904c3.38-8.608,1.905-20.623,1.905-32.374
+                                    c0-11.512,0.718-23.715-0.953-33.326C196.385,94.315,185.345,95.834,176.296,95.361z" />
+                            </svg>
+                            <span>Chatterbox</span>    
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <div id="chat_view"></div>
+                </td>
+                <!-- Add this if you have time
+                <td class="sidebar">
+                    <div class="rooms-containter">
+                        Rooms
+                    </div>
+                </td>
+                -->
+            </tr>
+            <!-- Add this if you have time
+            <tr>
+                <td class="sidebar">
+                    <div class="users-container">
+                        Users
+                    </div>
+                </td>
+            </tr>
+            -->
+            <tr>
+                <td class="footer">
+                    <div class="entry-container">
+                        <form id="entry_form" autocomplete="off"><input type="text" id="message" placeholder="Enter Your Message" /></form>
+                    </div>
+                </td>
+                <!-- Add this if you have time
+                <td class="sidebar" id="misc">
+                    Icons
+                </td>
+                -->
+            </tr>
+        </tbody>
+    </table>
+    <div id="modal">
+        <div class="overlay"></div>
+        <div class="login">
+            <form id="registration_form">
+                <input type="text" id="display_name" placeholder="Choose a Display Name"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
