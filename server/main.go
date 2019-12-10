@@ -1,6 +1,7 @@
 package server
 
 import (
+	"chatterbox/lib"
 	"chatterbox/server/handlers"
 	"context"
 	"flag"
@@ -36,7 +37,13 @@ func StartServer(addr string) {
 	// API Server modules to load
 	modules := []func(r *mux.Router){
 		handlers.WebSocketModule,
-		handlers.WebClientModule,
+	}
+
+	// This allows us to build cli while developing, but removes it on the portable app
+	if lib.IsAppBinary() {
+		modules = append(modules, handlers.PrecompiledWebClientModule)
+	} else {
+		modules = append(modules, handlers.WebClientModule)
 	}
 
 	// Register Modules

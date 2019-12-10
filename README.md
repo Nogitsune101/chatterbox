@@ -4,11 +4,11 @@ So I have determined that the chat app is an evil test.  There were so many plac
 # Planning #
 During the planning phase I took the initial requirements and determined that the finished product would be a golang based backend that uses websockets and could be compiled into a secure portable chat server.  I should note that while the plan is to ultimately finish this application.  Below is a breakdown on the project milestones and the application you are getting now:
 
-- Milestone 1 - Meet the requirements of the test
-- Milestone 2 - Add direct messaging / chat features (currently what I'm turning in) 
-- Milestone 3 - Add authentication / security
-- Milestone 4 - Add component that takes server assets and converts them to golang resources so they can be compiled directly into the executable making the app portable
-- Release - Testing / Bug fixes / refactoring / polish
+- Milestone 1 - Meet the requirements of the test (complete)
+- Milestone 2 - Add direct messaging / chat features (complete) 
+- Milestone 3 - Add authentication / security (pending)
+- Milestone 4 - Add component that takes server assets and converts them to golang resources so they can be compiled directly into the executable making the app portable (complete)
+- Release - Testing / Bug fixes / refactoring / polish (pending)
 
 I decided to use golang / pure javascript (ES6) as my base for several reasons:
 - golang is so strict that it is less prone to bugs
@@ -49,9 +49,14 @@ If you have issues installing and compiling with golang (the struggle is real), 
  - `go run main.go`
 
 ## Build & Run ##
- - `go build`
+ - `go run main.go build`
  - `./chatterbox` (*nix systems)
- - IMPORTANT NOTE - The app is not yer portable, so if you deploy this, you will also need the assets directory
+
+## Portable Build Note ##
+This app now uses a precompiler to convert client assets to go code before compiling the app.  When using the development run,
+a build option is available that automatically generates the embeded client assets and compiles it with the application to
+make it fully portable. Another quick note, when running the server in development mode (go run main.go) it will use the assets
+directory instead of the embeded assets.
 
 ## Client Access ##
 - Webserver will start by default at http://localhost:8080
@@ -110,6 +115,7 @@ Had I the time, I would have added cypress tests for integration testing on the 
 - Static Emotes
 - Easter Eggs
 - Command Support
+- Fully Portable
 
 # Planned Features # 
 - AES end to end message encryption
@@ -118,7 +124,6 @@ Had I the time, I would have added cypress tests for integration testing on the 
 - Chat emoji support
 - Chat links support
 - Chat file support
-- Make the application fully portable
 
 # Known Bugs #
 - [Firefox] easter egg 1 is a bit clippy
